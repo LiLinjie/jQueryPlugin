@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tooltip 插件</title>
+	<style>
+	*{ margin: 0; padding: 0;}
+	.content{ width: 200px; font-size: 12px;}
+	.j-tooltips{ position: absolute; max-width: 200px; padding: 10px; font-size: 12px; border: 1px solid #ddd;background:#fff; line-height: 20px; border-radius: 10px;}
+	</style>
+</head>
+<body>
+	<div class="content" data-title="遮挡页面内容（图片上灰色半透明部分），透明度可以设置（不透明0-1完全透明），这样的好处是 在用户关闭对话框之前不能对页面进行操作">遮挡页面内容（图片上灰色半透明部分），透明度可以设置（不透明0-1完全透明），这样的好处是 在用户关闭对话框之前不能对页面进行操作</div>
+	<script src="../js/jquery.min.1.8.2.js"></script>
+	<script src="jquery.jTooltip.js"></script>
+	<script>
+		$('div').jTooltip();
+	</script>
+</body>
+</html>

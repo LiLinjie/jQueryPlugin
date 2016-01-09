@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>tab插件</title>
+	<style>
+		* { margin: 0; padding: 0;}
+		.tab-box { width: 98%;}
+		.tab { list-style: none; height: 31px;}
+		.tab li { float: left; height: 20px; padding: 5px; margin-left: 4px; line-height: 20px; border: 1px solid #48b; border-bottom: none; cursor: pointer; color: #000; background: #fff;}
+		.tab li.active { background: #48d;}
+		.tab-cont { border: 1px solid #48d; padding: 4px; height: auto; width: 98%;}
+		.tab-cont > div { display: none;}
+	</style>
+</head>
+<body>
+	<div class="tab-box">
+		<ul class="tab">
+			<li class="active">tab1</li>
+			<li>tab2</li>
+			<li>tab3</li>
+		</ul>
+		<div class="tab-cont">
+			<div style="display:block;">内容1</div>
+			<div>内容2</div>
+			<div>内容3</div>
+		</div>
+	</div>
+	<script src="../js/jquery.min.1.8.2.js"></script>
+	<script src="jquery.jTab.js"></script>
+	<script>
+	$(function () {
+		$('.tab-box').jTab();
+	})
+	</script>
+</body>
+</html>

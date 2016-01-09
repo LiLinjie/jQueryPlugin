@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dialog 插件</title>
+	<style>
+	*{ margin: 0; padding: 0; outline: none;}
+	html, body{ width: 100%; height: 100%; overflow: hidden;}
+	.j-ui-dialog{ position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto;}
+	.j-ui-dialog-title{position: relative; height: 30px; padding: 0 10px; line-height: 30px; background: #069;}
+	.j-ui-dialog-title h3{ float: left; font: 14px/30px "Microsoft Yahei"; color: #fff;}
+	.j-ui-dialog-title .j-ui-close{ position: absolute; top: 7px; right: 7px; width: 16px; height: 16px; background: #fff; cursor: pointer;}
+	.j-ui-dialog-cont{ padding: 10px; font-size: 12px; line-height: 20px; background: #fff; border: 1px solid #ddd;}
+	.j-ui-dialog-btns{ text-align: center; margin-top: 10px;}
+	.j-ui-dialog-btns .btn{ display: inline-block; padding: 0 10px; margin: 0 10px; line-height: 20px; color: #fff; border: none; background: #069; cursor: pointer; border-radius: 2px;}
+	.j-ui-dialog-btns .btn:hover{ opacity: 0.8; filter: alpha(opacity = 80);}
+	.dialog-cont{ display: none;}
+	</style>
+</head>
+<body>
+	<button id="dialogBtn">弹出对话框</button>
+	<div id="dialogDiv" class="dialog-cont">
+		内容内容
+		<div class="j-ui-dialog-btns">
+			<button class="btn">提交</button><button class="btn">取消</button>
+		</div>
+	</div>
+	<script src="../js/jquery.min.1.8.2.js"></script>
+	<script src="jquery.jDialog.js"></script>
+	<script>
+		$('#dialogBtn').on('click', function () {
+			$('#dialogDiv').jDialog({
+				title: '对话框demo'
+			})
+		});
+	</script>
+</body>
+</html>
